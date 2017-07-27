@@ -14,10 +14,10 @@ var uglify = require("gulp-uglify");
 
 
 gulp.task("default", ["clean"], function() {
-	gulp.run('dev');
+	gulp.run("dev");
 });
 
-gulp.task('dev', ["style", "script", "serve"]);
+gulp.task("dev", ["style", "script", "serve"]);
 
 gulp.task("style", function(){
   return gulp.src("sass/style.scss")
@@ -59,7 +59,7 @@ gulp.task("script", function() {
 gulp.task("serve", ["style"], function() {
   server.init({
     server: "."
-  }); 
+  });
 
   gulp.watch("sass/style.scss", ["style"]);
   gulp.watch("js/main.js", ["script"]);
