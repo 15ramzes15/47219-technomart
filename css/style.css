@@ -1,148 +1,183 @@
 body {
-  font-family: "Cuprum", "Arial", "sans-serif";
-  font-size: 14px;
-  color: #000000;
-  font-weight: normal;
-  background-color: #f1f5f7;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+
+  font-weight: normal;
+  font-size: 14px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  color: #000000;
+
+  background-color: #f1f5f7;
+}
 
 .h2 {
-  font-size: 30px;
-  font-family: "Cuprum", "Arial", "sans-serif";
-  line-height: 30px;
   font-weight: normal;
+  font-size: 30px;
+  line-height: 30px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  color: #32425c;
   text-transform: uppercase;
-  color: #32425c; }
+}
 
 .h3 {
+  font-weight: bold;
   font-size: 18px;
   line-height: 20px;
-  color: #000000;
   font-family: "PT Sans", "Arial", "sans-serif";
-  font-weight: bold; }
+  color: #000000;
+}
 
 .wrapper {
   width: 940px;
-  padding-left: 10px;
-  padding-right: 10px;
+  margin-right: auto;
   margin-left: auto;
-  margin-right: auto; }
+  padding-right: 10px;
+  padding-left: 10px;
+}
 
 .toolbar {
   height: 42px;
-  background-color: #293449; }
+
+  background-color: #293449;
+}
 
 .toolbar-logo {
-  font-family: "Cuprum", "Arial", "sans-serif";
-  color: #fff;
-  text-decoration: none;
-  text-transform: uppercase;
   display: inline-block;
+  padding: 9px 55px;
+
   font-size: 24px;
   line-height: 24px;
+  font-family: "Cuprum", "Arial", "sans-serif";
+  vertical-align: top;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
   background-color: #ee3643;
   border-bottom: 5px solid #b52933;
-  padding: 9px 55px;
   cursor: pointer;
-  vertical-align: top; }
+}
 
 .search-form {
   display: inline-block;
   width: 220px;
   margin-left: 10px;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  padding-top: 10px;
+
   font-size: 17px;
   line-height: 18px;
+  font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
-  padding-top: 10px;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .search-form label {
-  cursor: pointer; }
+  cursor: pointer;
+}
 
 #search {
-  display: none; }
+  display: none;
+}
 
 .bookmarks {
   display: inline-block;
   width: 140px;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  margin-left: 20px;
+  padding-top: 10px;
+
   font-size: 17px;
   line-height: 18px;
+  font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
-  padding-top: 10px;
-  margin-left: 20px; }
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .toolbar-cart {
   display: inline-block;
   width: 140px;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  margin-left: 20px;
+  padding-top: 10px;
+
   font-size: 17px;
   line-height: 18px;
+  font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
-  padding-top: 10px;
-  margin-left: 20px; }
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .new-order {
   display: inline-block;
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  margin-left: 20px;
+  padding-top: 10px;
+
   font-size: 17px;
   line-height: 18px;
+  font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
-  padding-top: 10px;
-  margin-left: 20px; }
+  color: #ffffff;
+  text-decoration: none;
+}
 
 .description-block {
   min-height: 150px;
-  margin-top: 20px; }
+  margin-top: 20px;
+}
 
 .header-description {
   display: inline-block;
-  vertical-align: top;
-  min-height: 150px;
   width: 300px;
-  margin-right: 20px;
+  min-height: 150px;
   margin-top: 0;
-  margin-bottom: 0px; }
+  margin-right: 20px;
+  margin-bottom: 0;
+
+  vertical-align: top;
+}
 
 .header-contacts {
   display: inline-block;
-  vertical-align: top;
   width: 300px;
   min-height: 150px;
-  margin-right: 20px; }
+  margin-right: 20px;
+
+  vertical-align: top;
+}
 
 .user-buttons {
   display: inline-block;
-  vertical-align: top;
   width: 293px;
-  min-height: 150px; }
+  min-height: 150px;
+
+  vertical-align: top;
+}
 
 .main-navigation {
   min-height: 55px;
+  padding-left: 50px;
+
   background-color: #32425c;
-  padding-left: 50px; }
+}
 
 .main-navigation ul {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 .main-navigation li {
   display: inline-block;
+
   vertical-align: top;
-  color: #ffffff; }
+  color: #ffffff;
+}
 
 .main-navigation li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-family: "Cuprum", "Arial", "sans-serif";
+  margin-right: 57px;
+
   font-size: 17px;
   line-height: 17px;
-  margin-right: 57px; }
+  font-family: "Cuprum", "Arial", "sans-serif";
+  color: #ffffff;
+  text-decoration: none;
+}

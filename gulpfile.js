@@ -11,6 +11,7 @@ var server = require("browser-sync").create();
 var rename = require("gulp-rename");
 var clean = require("gulp-clean");
 var uglify = require("gulp-uglify");
+var csscomb = require("gulp-csscomb");
 
 
 gulp.task("default", ["clean"], function() {
@@ -35,6 +36,7 @@ gulp.task("style", function(){
       "last 2 versions"
       ]})
     ]))
+    .pipe(csscomb())
     .pipe(gulp.dest("css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
