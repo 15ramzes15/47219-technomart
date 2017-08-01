@@ -50,7 +50,7 @@
       </div>
     </header>
     <main class="wrapper">
-      <section class="promotions">
+      <section class="promotions clearfix">
         <div class="promotions-block promotions-materials new">
           <b class="item-name">Материалы</b>
           <a href="#" class="btn">На любой вкус</a>
@@ -76,7 +76,7 @@
         </div>
       </section>
       <section class="featured-goods">
-        <div class="section-heading">
+        <div class="section-heading clearfix">
           <h2 class="h2">Популярные товары:</h2>
           <a class="header-btn">Все популярные товары</a>
         </div>
@@ -86,7 +86,7 @@
             <h3 class="h3">Перфоратор BOSCH BFG 9000</h3>
             <span class="discounted-price">32500 Р.</span>
             <a class="btn">25500 Р.</a>
-            <div class="item-hover-menu">
+            <div class="item-hover-menu">0
               <a class="buy-btn" href="#" data-modal="add_to_cart">Купить</a>
               <a class="bookmark-btn" href="#">В закладки</a>
             </div>
@@ -169,7 +169,7 @@
         </ul>
       </section>
     </main>
-    <section class="services">
+    <section class="services clearfix">
       <div class="wrapper">
         <h2 class="h2">Сервис</h2>
         <p class="service-p">Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
@@ -178,60 +178,42 @@
           <li><button class="slider-btn" data-index="1">Гарантия</button></li>
           <li><button class="slider-btn" data-index="2">Кредит</button></li>
         </ul>
-        <ul>
+        <ul class="services-slider">
           <li class="services-slide current-services-slide delivery-slide">
             <h3 class="h3">Доставка</h3>
             <p>
               Мы с удовольствием доставим ваш товар прямо <br>
-              к вашему подъезду совершенно бесплатно!
+              к вашему подъезду совершенно бесплатно!<br>
               Ведь мы неплохо заработаем, <br>
               поднимая его на ваш этаж!
             </p>
           </li>
-          <li class="services-slide warrancy-slide">
-            <h3 class="h3">Гарантия</h3>
-            <p>
-              Если купленный у нас товар поломается или заискрит, <br>
-              а также в случае пожара, спровоцированного его возгаранием,
-              вы всегда можете быть уверены в нашей гарантии. Мы обменяем
-              сгоревший товар на новый. <br>
-              Дом уж восстановите как-нибудь сами.
-            </p>
-          </li>
-          <li class="services-slide credit-slide">
-            <h3 class="h3">Кредит</h3>
-            <p>
-              Залезть в долговую яму стало проще! <br>
-              Кредитные консультанты придут вам на помощь.
-            </p>
-            <a href="#" class="btn">Отправить заявку</a>
-          </li>
         </ul>
-        <section class="about-us-contacts">
-          <div class="about-us">
-            <h2 class="h2">Компания &laquo;Техномарт&raquo;</h2>
-            <p class="about-us-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
-            <p class="about-us-text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
-            <ul>
-              <li>Деловые линии</li>
-              <li>Автотрейдинг</li>
-              <li>ЖелДорЭкспедиция</li>
-              <a class="about-us btn" href="#">Подробнее о компании</a>
-            </ul>
-          </div>
-          <div class="contacts">
-            <h2 class="h2">Контакты</h2>
-            <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис:</p>
-            <a class="contacts btn" href="#">Заблудились? Напишите нам!</a>
-          </div>
-        </section>
       </div>
     </section>
-    <footer class="site-footer">
+    <section class="about-us-contacts">
       <div class="wrapper">
-        <div class="footer-logo">
-          <img src="#" alt="" width="" height="">
+        <div class="about-us">
+          <h2 class="h2">Компания &laquo;Техномарт&raquo;</h2>
+          <p class="about-us-text">Настоящий мужской шоппинг начинается здесь! Огромный выбор товаров для ремонта и строительства не оставит равнодушными любителей сэкномить на гастарбайтерах.</p>
+          <p class="about-us-text">Мы можем доставить ваш товар в самые отдаленные точки России! Техномарт работает со многими транспортными компаниями: </p>
+          <ul>
+            <li>Деловые линии</li>
+            <li>Автотрейдинг</li>
+            <li>ЖелДорЭкспедиция</li>
+            <a class="about-us btn" href="#">Подробнее о компании</a>
+          </ul>
         </div>
+        <div class="contacts">
+          <h2 class="h2">Контакты</h2>
+          <p class="contacts-text">Вы можете забрать товар сами, заехав в наш офис:</p>
+          <a class="contacts btn" href="#">Заблудились? Напишите нам!</a>
+        </div>
+      </div>
+    </section>
+    <div class="site-footer">
+      <div class="wrapper">
+        <a class="footer-logo">Техномарт</a>
         <nav class="footer-upper-nav">
           <ul>
             <li><a href="#">Компания</a></li>
@@ -253,26 +235,26 @@
           </ul>
       </nav>
       </div>
-      <div class="contacts-footer">
-        <div class="wrapper">
-          <p class="contacts-copyright">
-            &#169; 2010-2016 Компания &laquo;Техномарт&raquo; Все права защищены
-          </p>
-          <ul class="social-link">
-						<li><a class="social-btn social-btn-vk" href="#" title="Перейти в нашу группу Вконтакте" target="_blank">Вконтакте</a></li>
-						<li><a class="social-btn social-btn-fb" href="#" title="Перейти в нашу группу в Фейсбук" target="_blank">Фейсбук</a></li>
-						<li><a class="social-btn social-btn-inst" href="#" title="Перейти в нашу страницу в Инстаграм" target="_blank">Инстаграм</a></li>
-          </ul>
-          <p class="footer-feedback">
-            <span>Обратная связь:</span>
-            <a href="mailto:htmlacademy.ru">mail@htmlacademy.ru</a>
-          </p>
-          <p class="autors">
-            <span>Разработано:</span>
-            <a href="https://htmlacademy.ru" traget="_blank">htmlacademy.ru</a>
-          </p>
-        </div>
+    </div>
+    <div class="contacts-footer">
+      <div class="wrapper">
+        <p class="contacts-copyright">
+          &#169; 2010-2016 Компания &laquo;Техномарт&raquo; Все права защищены
+        </p>
+        <ul class="social-link">
+          <li><a class="social-btn social-btn-vk" href="#" title="Перейти в нашу группу Вконтакте" target="_blank">Вконтакте</a></li>
+          <li><a class="social-btn social-btn-fb" href="#" title="Перейти в нашу группу в Фейсбук" target="_blank">Фейсбук</a></li>
+          <li><a class="social-btn social-btn-inst" href="#" title="Перейти в нашу страницу в Инстаграм" target="_blank">Инстаграм</a></li>
+        </ul>
+        <p class="footer-feedback">
+          <span>Обратная связь:</span>
+          <a href="mailto:htmlacademy.ru">mail@htmlacademy.ru</a>
+        </p>
+        <p class="authors">
+          <span>Разработано:</span>
+          <a href="https://htmlacademy.ru" traget="_blank">htmlacademy.ru</a>
+        </p>
       </div>
-    </footer>
+    </div>
   </body>
 </html>
