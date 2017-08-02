@@ -30,7 +30,7 @@ body {
 }
 
 .main-header {
-  min-height: 280px;
+  min-height: 330px;
 
   background-color: #f1f5f7;
 }
@@ -456,7 +456,7 @@ body {
   margin-right: 20px;
   padding: 0;
 
-  vertical-align: top; 
+  vertical-align: top;
 
   outline: 2px solid yellow;
 }
@@ -467,7 +467,134 @@ body {
   margin: 0;
   padding: 0;
 
-  vertical-align: top; 
+  vertical-align: top;
 
   outline: 2px solid yellow;
+}
+
+.breadcrumbs ul {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.breadcrumbs ul li {
+  display: inline-block;
+  padding: 25px 0;
+
+  list-style: none;
+  vertical-align: top;
+}
+
+.catalog-header {
+  display: block;
+  margin: 0;
+  padding: 15px 0;
+  padding-left: 25px;
+
+  background-color: #f2f6f8;
+}
+
+.searchbar-filter {
+  display: inline-block;
+  width: 220px;
+  height: 40px;
+  margin-right: 40px;
+
+  vertical-align: top;
+
+  outline: 2px solid #32425c;
+}
+
+.searchbar-sort {
+  display: inline-block;
+  width: 676px;
+  height: 40px;
+
+  vertical-align: top;
+}
+
+.sort-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  vertical-align: top;
+}
+
+.sort-description {
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.sort-nav li {
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+form {
+  display: inline-block;
+  margin-right: 16px; 
+
+  vertical-align: top;
+}
+
+.items-options {
+  width: 220px;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+  outline: 2px solid red;
+}
+
+.catalog-item-list {
+  display: inline-block;
+  width: 700px;
+
+  vertical-align: top;
+
+  outline: 2px solid yellow;
+}
+
+.catalog-item {
+  display: inline-block;
+  width: 220px;
+  height: 320px;
+  margin-right: 16px;
+  margin-bottom: 20px; 
+
+  vertical-align: top;
+}
+
+.catalog-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.catalog-nav {
+  outline: 2px solid green;
+}
+
+.catalog-nav ul {
+  margin: 0;
+  padding: 30px 0;
+  padding-left: 240px; 
+
+  list-style: none;
+}
+
+.catalog-nav ul li {
+  display: inline-block;
+
+  vertical-align: top;
+}
+
+.about-goods {
+  padding: 80px 0; 
+
+  background-color: #f2f6f8;
 }
