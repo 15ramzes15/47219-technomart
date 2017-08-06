@@ -14,7 +14,7 @@ var uglify = require("gulp-uglify");
 var csscomb = require("gulp-csscomb");
 
 
-gulp.task("default", ["clean"], function() {
+gulp.task("default", function() {
 	gulp.run("dev");
 });
 
@@ -69,8 +69,3 @@ gulp.task("serve", ["style"], function() {
   gulp.watch("*.html")
     .on("change", server.reload);
 });
-
-gulp.task("clean", function() {
-	return gulp.src("css/")
-		.pipe(clean());
-})
