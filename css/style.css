@@ -18,7 +18,6 @@ body {
   font-size: 30px;
   line-height: 30px;
   font-family: "Cuprum", "Arial", "sans-serif";
-  color: #32425c;
   text-transform: uppercase;
 }
 
@@ -254,6 +253,8 @@ body {
 }
 
 .promotions-slider {
+  position: relative;
+
   float: left;
   width: 620px;
   height: 266px;
@@ -261,6 +262,38 @@ body {
   margin-bottom: 55px;
 
   outline: 2px solid green;
+}
+
+.promotions-slider .slider-controls {
+  position: absolute;
+  bottom: 65px;
+  left: 300px;
+  z-index: 1000; 
+
+  width: 60px;
+  height: 10px;
+
+  text-align: center;
+
+  outline: 2px solid red;
+}
+
+.slider-controls i {
+  display: inline-block;
+  width: 4px;
+  height: 4px;
+  margin: 0 3px;
+
+  vertical-align: top;
+
+  background-color: ffffff;
+  border: 3px solid white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.promotion-slide {
+  display: none;
 }
 
 .section-heading {
@@ -380,7 +413,7 @@ body {
   margin-right: 11px;
   margin-bottom: 20px;
 
-  font-size: 0; 
+  font-size: 0;
   vertical-align: top;
 
   border: 2px solid #e7e7e7;
@@ -397,53 +430,150 @@ body {
   background-color: #f2f6f8;
 }
 
-.service-p {
-  width: 400px;
-  height: 75px;
+.services .h2 {
+  color: #32425c;
 }
 
-.slider-menu {
-  float: left;
+.services p {
+  width: 400px;
+
+  line-height: 24px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+}
+
+.services-slider {
+  min-height: 274px;
+  margin-top: 71px;
+}
+
+.slider-controls {
+  position: relative;
+
+  width: 240px;
   margin: 0;
   margin-right: 80px;
   padding: 0;
-
-  list-style: none;
 }
 
-.slider-btn {
+.slider-controls {
+  position: relative;
+
+  float: left;
   width: 240px;
-  padding: 20px 0;
+  margin: 0;
+  margin-right: 80px;
+  padding: 0;
+}
+
+.services-slider span:first-child::after {
+  content: "";
+  position: absolute;
+  top: -40px;
+  right: -1px;
+  z-index: 2;
+
+  width: 10px;
+  height: 272px;
+
+  background-image: url("../img/spritesheet.png");
+  background-position: -5px -1132px;
+}
+
+.slider-controls span {
+  display: block;
+  padding: 16px 20px;
 
   font-size: 21px;
-  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
-  color: #ffffff;
+  line-height: 30px;
+  font-family: "Cuprum", Helvetica, Arial, sans-serif;
+  text-align: left;
+  color: white;
 
   background-color: #32425c;
   border: none;
+  -webkit-box-shadow: inset 0 -1px 0 #293449;
+          box-shadow: inset 0 -1px 0 #293449;
 }
 
-.active {
-  font-size: 21px;
-  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
+.slider-btn:hover {
+  background-color: #293449;
+}
+
+.slider-controls .active {
   color: #32425c;
 
   background-color: #ffffff;
 }
 
-.services-slider {
-  display: inline-block;
-  clear: both;
+.slide {
+  position: absolute;
+  left: 662px;
+
+  width: 640px;
+  min-height: 261px;
+  overflow: hidden;
+}
+
+.slide .h3 {
   margin: 0;
-  padding: 0;
+  margin-bottom: 28px;
+
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 30px;
+  font-family: "Cuprum", Helvetica, Arial, sans-serif;
+  color: #32425c;
+  text-transform: uppercase;
 }
 
-.services-slide {
-  list-style: none;
+.slide p {
+  width: 315px;
+
+  font-size: 13px;
+  line-height: 24px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
 }
 
-.services-slide p {
-  width: 301px;
+.slide .btn {
+  display: block;
+  width: 195px;
+  margin-top: 19px;
+  padding: 5px 0;
+
+  font-family: "Cumprum", "Helvetica", "Arial", "sans-serif";
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.delivery-slide {
+  background-image: url("../img/service-slider-1.jpg");
+  background-repeat: no-repeat;
+  background-position: 152px 25px;
+}
+
+.warrancy-slide {
+  background-image: url("../img/service-slider-2.jpg");
+  background-repeat: no-repeat;
+  background-position: 232px 25px;
+}
+
+.credit-slide {
+  background-image: url("../img/service-slider-3.jpg");
+  background-repeat: no-repeat;
+  background-position: 155px 25px;
+}
+
+.slide {
+  display: none;
+}
+
+.current-services-slide {
+  display: block;
 }
 
 .about-us-contacts {
