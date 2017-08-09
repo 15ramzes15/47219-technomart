@@ -203,8 +203,6 @@ body {
   margin-bottom: 20px;
 
   vertical-align: top;
-
-  outline: 2px solid gray;
 }
 
 .promotions-materials {
@@ -260,40 +258,126 @@ body {
   height: 266px;
   margin-right: 20px;
   margin-bottom: 55px;
-
-  outline: 2px solid green;
 }
 
-.promotions-slider .slider-controls {
+.promotions-slider
+.promotion-slider-controls {
   position: absolute;
-  bottom: 65px;
+  bottom: 40px;
   left: 300px;
-  z-index: 1000; 
+  z-index: 1000;
 
-  width: 60px;
+  width: 80px;
   height: 10px;
 
   text-align: center;
-
-  outline: 2px solid red;
 }
 
-.slider-controls i {
+.promotions-slider i {
   display: inline-block;
-  width: 4px;
-  height: 4px;
+  width: 10px;
+  height: 10px;
   margin: 0 3px;
 
   vertical-align: top;
 
-  background-color: ffffff;
-  border: 3px solid white;
+  background-color: #ffffff;
+  border: 2px solid #ffffff;
   border-radius: 50%;
   cursor: pointer;
 }
 
+.promotion-slider-controls
+.active {
+  background-color: #ee3643;
+}
+
 .promotion-slide {
-  display: none;
+  display: none; 
+  height: 212px;
+  padding: 27px 27px;
+  overflow: hidden;
+
+  background-color: #f1f5f7;
+}
+
+.promotion-slide
+.promotion-slide-title {
+  font-size: 36px;
+  line-height: 30px;
+  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
+}
+
+.promotion-slide p {
+  margin-bottom: 109px;
+
+  font-size: 18px;
+  line-height: 24px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
+}
+
+.promotion-slide
+.btn {
+  display: inline-block;
+  width: 195px;
+  padding: 9px 0;
+
+  vertical-align: top;
+  text-align: center;
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+}
+
+.promotions-slider .prev-slide,
+.promotions-slider .next-slide {
+  position: absolute;
+  top: 115px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: transparent;
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+}
+
+.promotions-slider
+.prev-slide {
+  left: 27px;
+
+  width: 22px;
+  height: 40px;
+
+  background-position: -5px -496px;
+}
+
+.promotions-slider
+.next-slide {
+  right: 20px;
+
+  width: 22px;
+  height: 40px;
+
+  background-position: -5px -729px;
+}
+
+.slide-perfs {
+  background-image: url("../img/slider-btn-1.jpg");
+}
+
+.slide-drills {
+  background-image: url("../img/slider-btn-2.jpg");
+}
+
+.current-slide {
+  display: block;
 }
 
 .section-heading {
