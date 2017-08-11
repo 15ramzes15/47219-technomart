@@ -74,8 +74,7 @@ body {
 
 .search-form {
   display: inline-block;
-  width: 220px;
-  margin-left: 10px;
+  width: 260px;
   padding-top: 10px;
 
   font-size: 17px;
@@ -86,6 +85,8 @@ body {
 }
 
 .search-form label {
+  padding-left: 45px; 
+
   cursor: pointer;
 }
 
@@ -168,7 +169,7 @@ body {
   display: inline-block;
   width: 300px;
   min-height: 150px;
-  margin-right: 28px;
+  margin-right: 37px;
 
   vertical-align: top;
   text-align: center;
@@ -1107,12 +1108,19 @@ body {
 .searchbar-filter {
   display: inline-block;
   width: 220px;
-  height: 40px;
+  margin-top: 20px;
   margin-right: 40px;
+  margin-bottom: 20px;
+  padding: 13px 0;
 
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
   vertical-align: top;
+  text-align: center; 
+  text-transform: uppercase;
 
-  outline: 2px solid #32425c;
+  background-color: #f7f3ec;
 }
 
 .searchbar-sort {
@@ -1156,7 +1164,118 @@ form {
   padding: 0;
 
   border: none;
-  outline: 2px solid red;
+}
+
+.main-sort-description {
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+}
+
+.range-filter {
+  width: 220px;
+  margin: 0 auto;
+}
+
+.range-controls {
+  position: relative;
+
+  height: 41px;
+  margin-bottom: 15px;
+  padding-top: 39px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  background: #f1f1f1; 
+  border-radius: 5px;
+}
+
+.range-controls
+.scale {
+  height: 2px;
+
+  background: #d7dcde;
+}
+
+.range-controls
+.bar {
+  width: 70%;
+  height: 2px;
+
+  background: #00ca74;
+}
+
+.range-controls
+.toggle {
+  position: absolute;
+  top: 30px;
+  left: 0;
+
+  width: 4px;
+  height: 4px;
+
+  background: #ababab;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
+          box-shadow: 0 2px 1px 0 #cfcfcf; 
+  cursor: pointer;
+}
+
+.range-controls
+.toggle-min {
+  left: 50px;
+}
+
+.range-controls .toggle-max {
+  left: 110px;
+}
+
+.price-controls {
+  font-size: 0;
+}
+
+.price-controls label {
+  display: inline-block; 
+
+  font-size: 16px;
+}
+
+.min-price {
+  width: 104px;
+}
+
+.max-price input {
+  margin-left: 10px;
+}
+
+.price-controls input {
+  width: 95px;
+  padding: 8px 0;
+
+  font-size: 16px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  text-align: center;
+  color: #283136;
+
+  background: #f1f1f1; 
+  border: none;
+  border-radius: 5px;
+}
+
+.items-options {
+  border-top: 1px solid #e5e5e5;
+}
+
+.sort-description {
+  margin-top: 10px; 
+
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
 }
 
 .catalog {
