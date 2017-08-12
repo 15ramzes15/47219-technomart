@@ -85,7 +85,7 @@ body {
 }
 
 .search-form label {
-  padding-left: 45px; 
+  padding-left: 45px;
 
   cursor: pointer;
 }
@@ -1117,39 +1117,10 @@ body {
   line-height: 18px;
   font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
   vertical-align: top;
-  text-align: center; 
+  text-align: center;
   text-transform: uppercase;
 
   background-color: #f7f3ec;
-}
-
-.searchbar-sort {
-  float: right;
-  width: 676px;
-  height: 40px;
-
-  outline: 2px solid red;
-}
-
-.sort-nav {
-  display: inline-block;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-  vertical-align: top;
-}
-
-.sort-description {
-  display: inline-block;
-
-  vertical-align: top;
-}
-
-.sort-nav li {
-  display: inline-block;
-
-  vertical-align: top;
 }
 
 form {
@@ -1161,12 +1132,15 @@ form {
 .items-options {
   width: 220px;
   margin: 0;
+  margin-bottom: 25px;
   padding: 0;
 
   border: none;
 }
 
 .main-sort-description {
+  margin-bottom: 23px;
+
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -1188,7 +1162,7 @@ form {
   padding-right: 20px;
   padding-left: 20px;
 
-  background: #f1f1f1; 
+  background: #f7f3ec;
   border-radius: 5px;
 }
 
@@ -1220,7 +1194,7 @@ form {
   border: 8px solid #ffffff;
   border-radius: 50%;
   -webkit-box-shadow: 0 2px 1px 0 #cfcfcf;
-          box-shadow: 0 2px 1px 0 #cfcfcf; 
+          box-shadow: 0 2px 1px 0 #cfcfcf;
   cursor: pointer;
 }
 
@@ -1229,7 +1203,8 @@ form {
   left: 50px;
 }
 
-.range-controls .toggle-max {
+.range-controls
+.toggle-max {
   left: 110px;
 }
 
@@ -1238,7 +1213,7 @@ form {
 }
 
 .price-controls label {
-  display: inline-block; 
+  display: inline-block;
 
   font-size: 16px;
 }
@@ -1253,6 +1228,7 @@ form {
 
 .price-controls input {
   width: 95px;
+  margin-bottom: 25px;
   padding: 8px 0;
 
   font-size: 16px;
@@ -1260,17 +1236,45 @@ form {
   text-align: center;
   color: #283136;
 
-  background: #f1f1f1; 
+  background: #f7f3ec;
   border: none;
   border-radius: 5px;
 }
 
-.items-options {
-  border-top: 1px solid #e5e5e5;
+.items-options label:hover {
+  opacity: 0.7;
+}
+
+.items-options button {
+  width: 140px;
+  margin-top: 56px;
+  padding: 12px 0;
+
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
 }
 
 .sort-description {
-  margin-top: 10px; 
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  text-transform: uppercase;
+}
+
+.items-options {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.items-options:last-child {
+  border-bottom: none;
+}
+
+.sort-description {
+  margin-bottom: 15px;
 
   font-weight: bold;
   font-size: 17px;
@@ -1278,11 +1282,191 @@ form {
   font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
 }
 
+input[type="checkbox"],
+input[type="radio"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  position: relative;
+
+  display: block;
+  margin-bottom: 18px;
+  padding-top: 1px;
+  padding-left: 40px;
+
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+
+  cursor: pointer;
+}
+
+input[type="checkbox"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 23px;
+  height: 23px;
+
+  background: transparent url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -283px;
+}
+
+input[type="checkbox"]:checked + label::before {
+  width: 23px;
+  height: 23px;
+
+  background-position: -5px -316px;
+}
+
+input[type="radio"] + label {
+  position: relative;
+
+  display: block;
+  margin-bottom: 18px;
+  padding-top: 1px;
+  padding-left: 40px;
+
+  font-size: 15px;
+  line-height: 20px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+
+  cursor: pointer;
+}
+
+input[type="radio"] + label::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 25px;
+  height: 25px;
+
+  background: transparent url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -349px;
+}
+
+input[type="radio"]:checked + label::before {
+  width: 25px;
+  height: 25x;
+
+  background-position: -5px -384px;
+}
+
 .catalog {
   float: right;
-  width: 676px; 
+  width: 676px;
+}
 
-  outline: 2px solid gray;
+.searchbar-sort {
+  float: right;
+  width: 676px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 13px 0;
+
+  background-color: #f7f3ec;
+}
+
+.sort-nav {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+  vertical-align: top;
+}
+
+.searchbar-sort-description {
+  display: inline-block;
+  padding-left: 20px;
+
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  vertical-align: top;
+  text-transform: uppercase;
+}
+
+.sort-nav {
+  padding-left: 100px;
+}
+
+.sort-nav li {
+  display: inline-block;
+  margin-right: 70px;
+
+  vertical-align: top;
+}
+
+.sort-nav a {
+  font-size: 13px;
+  line-height: 18px;
+  font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
+  vertical-align: top;
+  color: #acaaa5;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  border-bottom: 1px dashed #ee3643;
+}
+
+.sort-nav li:last-child {
+  margin-right: 0;
+}
+
+.sort-nav .checked {
+  color: #ee3643;
+
+  border-bottom: none;
+}
+
+.searchbar-sort .up-sort {
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+  margin-right: 19px;
+  margin-left: 20px;
+
+  vertical-align: middle;
+
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -855px;
+  opacity: 0.3;
+}
+
+.searchbar-sort .down-sort {
+  display: inline-block;
+  width: 11px;
+  height: 10px;
+
+  vertical-align: middle;
+
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -855px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transform-origin: 50% 50%;
+          transform-origin: 50% 50%;
+  opacity: 0.3;
+}
+
+.up-sort:hover,
+.down-sort:hover {
+  opacity: 1;
+}
+
+.searchbar-sort .active-arrow {
+  background-position: -5px -875px;
+  opacity: 1;
 }
 
 .catalog-item-list {
@@ -1301,17 +1485,13 @@ form {
   margin-right: 20px;
   margin-bottom: 20px;
 
-  vertical-align: top; 
+  vertical-align: top;
 
   border: 1px solid grey;
 }
 
 .catalog-item:nth-child(3n) {
   margin-right: 0;
-}
-
-.catalog-nav {
-  outline: 2px solid green;
 }
 
 .catalog-nav ul {
