@@ -88,6 +88,9 @@ body {
   margin: 0;
   padding: 0;
 }
+.search-form:hover .search-icon {
+  opacity: 1;
+}
 
 .search-icon {
   position: absolute;
@@ -103,33 +106,34 @@ body {
   background-position: -5px -801px;
   opacity: 0.3;
 }
+.search-icon:active {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -829px;
+  opacity: 0.3;
+}
 
 .search-field {
   position: absolute;
   top: 9px;
   left: 48px;
 
-  margin-left: 45px;
-
   font-size: 17px;
   font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
   color: #ffffff;
-}
-
-.search-form:hover .search-icon {
-  opacity: 1;
 }
 
 .search-form input {
   display: block;
   width: 95%;
   padding-top: 40px;
-  padding-left: 50px;
 
   background-color: #293449;
   border: none;
 }
 .search-form input:focus {
+  z-index: 2; 
+
   background-color: #ffffff;
 }
 .search-form input:focus + .search-icon {
@@ -1265,7 +1269,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum", "Arial", "sans-serif";
-  color: #ffffff;
+  color: #ffd180;
   text-decoration: none;
 }
 .footer-lower-nav a:hover {
@@ -1403,7 +1407,7 @@ body {
 .footer-feedback a:hover {
   text-decoration: underline;
 }
-.footer-feedback a .feedback-link a:active {
+.footer-feedback ase.feedback-link a:active {
   color: #ee3643;
   text-decoration: none;
 }

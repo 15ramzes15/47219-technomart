@@ -89,6 +89,10 @@ body {
   width: 260px;
   margin: 0;
   padding: 0;
+
+  &:hover .search-icon {
+    opacity: 1;
+  }
 }
 
 .search-icon {
@@ -104,6 +108,13 @@ body {
   background-repeat: no-repeat;
   background-position: -5px -801px;
   opacity: 0.3;
+
+  &:active {
+  background-image: url("../img/spritesheet.png");
+  background-repeat: no-repeat;
+  background-position: -5px -829px;
+  opacity: 0.3;
+  }
 }
 
 .search-field {
@@ -111,28 +122,22 @@ body {
   top: 9px;
   left: 48px;
 
-  margin-left: 45px;
-
   font-size: 17px;
   font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
   color: #ffffff;
-}
-
-.search-form:hover .search-icon {
-  opacity: 1;
 }
 
 .search-form input {
   display: block;
   width: 95%;
   padding-top: 40px;
-  padding-left: 50px;
 
   background-color: #293449;
   border: none;
 
   &:focus {
     background-color: #ffffff;
+    z-index: 2;
   }
 
   &:focus + .search-icon {
@@ -1289,7 +1294,7 @@ body {
   font-size: 18px;
   line-height: 24px;
   font-family: "Cuprum", "Arial", "sans-serif";
-  color: #ffffff;
+  color: #ffd180;
   text-decoration: none;
 
   &:hover {
@@ -1434,7 +1439,7 @@ body {
     text-decoration: underline;
   }
 
-  .feedback-link a:active {
+  &se.feedback-link a:active {
     color: #ee3643;
     text-decoration: none;
   }
