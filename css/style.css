@@ -668,7 +668,7 @@ body {
   text-align: center;
 }
 
-.promotions-slider i {
+.promotions-slider .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -950,15 +950,6 @@ body {
 .slider-controls {
   position: relative;
 
-  width: 240px;
-  margin: 0;
-  margin-right: 80px;
-  padding: 0;
-}
-
-.slider-controls {
-  position: relative;
-
   float: left;
   width: 240px;
   margin: 0;
@@ -966,13 +957,7 @@ body {
   padding: 0;
 }
 
-.slider-controls .active {
-  color: #32425c;
-
-  background-color: #ffffff;
-}
-
-.services-slider span:first-child::after {
+.services-slider button:first-child::after {
   content: "";
   position: absolute;
   top: -40px;
@@ -988,7 +973,9 @@ body {
 
 .slider-btn {
   display: block;
-  padding: 16px 20px;
+  width: 240px;
+  padding: 16px 0;
+  padding-left: 20px;
 
   font-size: 21px;
   line-height: 30px;
@@ -1000,16 +987,24 @@ body {
   border: none;
   -webkit-box-shadow: inset 0 -1px 0 #293449;
           box-shadow: inset 0 -1px 0 #293449;
+  cursor: pointer;
 }
 .slider-btn:hover {
   background-color: #293449;
 }
 
-.services-slide {
+.slider-controls .active {
+  color: #32425c;
+
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.services-slides {
   position: relative;
 }
 
-.slide {
+.services-slide {
   position: absolute;
   left: 330px;
 
@@ -1018,7 +1013,7 @@ body {
   overflow: hidden;
 }
 
-.slide .h3 {
+.services-slide .h3 {
   margin: 0;
   margin-bottom: 28px;
 
@@ -1030,7 +1025,7 @@ body {
   text-transform: uppercase;
 }
 
-.slide p {
+.services-slide p {
   width: 315px;
 
   font-size: 13px;
@@ -1038,7 +1033,7 @@ body {
   font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
 }
 
-.slide .btn {
+.services-slide .btn {
   display: block;
   width: 195px;
   margin-top: 19px;
@@ -1072,7 +1067,23 @@ body {
   background-position: 155px 25px;
 }
 
-.slide {
+.credit-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 45px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.services-slide {
   display: none;
 }
 
@@ -1158,7 +1169,7 @@ body {
   font-family: "PT Sans", "Helvetica", "Arial", sans-serif;
 }
 
-.contacts .btn {
+.contacts-btn {
   display: inline-block;
   width: 300px;
   margin-top: 20px;
@@ -2093,10 +2104,10 @@ input[type="radio"]:checked + label::before {
 
 .modal-content {
   position: absolute;
-  top: 2500px;
+  top: 2300px;
   left: 50%;
 
-  display: none; 
+  display: none;
   width: 620px;
   margin-left: -390px;
 
@@ -2160,7 +2171,7 @@ input[type="radio"]:checked + label::before {
 }
 
 .modal-content label {
-  font-weight: 500; 
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
 }
@@ -2203,7 +2214,7 @@ textarea {
   width: 424px;
   height: 114px;
   margin: 0;
-  margin-bottom: 35px; 
+  margin-bottom: 35px;
   padding: 14px 16px;
 
   font-size: 16px;
@@ -2228,18 +2239,23 @@ textarea {
   font-size: 13px;
   font-family: "Cumprum", "Helvetica", "Arial", "sans-serif";
   color: #ffffff;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 
   background-color: #ee3643;
   border: none;
 }
 
-.map {
+.modal-content-show {
+  display: block;
+}
+
+.modal-content-map {
   position: absolute;
   top: 2500px;
   left: 50%;
 
-  display: none; 
+  display: none;
+  display: none;
   width: 940px;
   height: 445px;
   margin-left: -470px;
@@ -2252,7 +2268,7 @@ textarea {
           box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
 }
 
-.map-close {
+.modal-content-close {
   position: absolute;
   top: 6px;
   right: 6px;
@@ -2267,8 +2283,8 @@ textarea {
   cursor: pointer;
 }
 
-.map-close::before,
-.map-close::after {
+.modal-content-close::before,
+.modal-content-close::after {
   content: "";
   position: absolute;
   top: 11px;
@@ -2288,4 +2304,8 @@ textarea {
 .map-close::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+}
+
+.modal-content-show {
+  display: block;
 }

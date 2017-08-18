@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Academy:Техномарт</title>
+    <link rel="shortcut icon" href="/img/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,700,700i%7CPT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.min.css" rel="stylesheet">
     <link href="css/style.min.css" rel="stylesheet">
@@ -66,11 +67,11 @@
         </div>
         <div class="promotions-slider">
           <div class="promotion-slider-controls">
-            <i class="active"></i>
-            <i></i>
+            <i class="dot active" onclick="currentSlide(1)"></i>
+            <i class="dot" onclick="currentSlide(1)"></i>
           </div>
-          <button class="prev-slide"></button>
-          <button class="next-slide"></button>
+          <button class="prev-slide" onclick="plusSlides(-1)"></button>
+          <button class="next-slide" onclick="plusSlides(1)"></button>
           <div class="promotion-slide current-slide slide-perfs ">
             <div class="slide-text">
               <div class="promotion-slide-title">Перфораторы</div>
@@ -85,7 +86,6 @@
               <a class="btn" href="#">Узнать больше</a>
             </div>
           </div>
-        </div>
         </div>
         <div class="promotions-block promotions-discounts">
           <b class="item-name">Скидки 50%</b>
@@ -199,23 +199,23 @@
         <p>Хороший интернет-магазин отличается от плохого не только ценами! Мы стараемся изо всех сил, чтобы сделать ваши покупки приятными.</p>
         <div class="services-slider">
           <div class="slider-controls">
-            <span class="slider-btn active">Доставка</span>
-            <span class="slider-btn">Гарантия</span>
-            <span class="slider-btn">Кредит</span>
+            <button class="slider-btn active" data-index="0">Доставка</button>
+            <button class="slider-btn" data-index="1">Гарантия</button>
+            <button class="slider-btn" data-index="2">Кредит</button>
           </div>
-          <div class="services-slide">
-            <div class="slide current-services-slide delivery-slide">
+          <div class="services-slides">
+            <div class="services-slide delivery-slide current-services-slide">
               <h3 class="h3">Доставка</h3>
               <p>Мы с удовольствием доставим ваш товар прямо <br> к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, <br> поднимая его на ваш этаж!</p>
             </div>
-            <div class="slide warrancy-slide">
+            <div class="services-slide warrancy-slide">
               <h3 class="h3">Гарантия</h3>
               <p>Если купленный у нас товар поломается или заискрит, <br> а также в случае пожара, спровоцированного его возгаранием, вы всегда можете быть уверены в нашей гарантии. Мы обменяем сгоревший товар на новый. <br> Дом уж восстановите как-нибудь сами.!</p>
             </div>
-            <div class="slide credit-slide">
+            <div class="services-slide credit-slide">
               <h3 class="h3">Кредит</h3>
               <p>Залезть в долговую яму стало проще! <br> Кредитные консультанты придут вам на помощь.
-                <a href="#" class="btn">Отправить заявку</a>
+                <a href="#" class="credit-btn">Отправить заявку</a>
               </p>
             </div>
           </div>
@@ -239,7 +239,7 @@
           <h2 class="h2">Контакты</h2>
           <p class="contacts-text">Вы можете забрать товар сами,<br> заехав в наш офис:</p>
           <img src="img/map.jpg" alt="">
-          <a class="contacts btn" href="#">Заблудились? Напишите нам!</a>
+          <a class="contacts-btn" href="#">Заблудились? Напишите нам!</a>
         </div>
       </div>
     </section>
@@ -307,9 +307,10 @@
         <button class="submit-modal-content" type="submit">Отправить</button>
       </div>
     </div>
-    <div class="map">
-      <button class="map-close" title="Закрыть">Закрыть</button>
+    <div class="modal-content-map">
+      <button class="modal-content-close" type="button" title="Закрыть">Закрыть</button>
       <img src="img/map popup.png" alt="">
     </div>
+    <script src="js/main.min.js"></script>
   </body>
 </html>

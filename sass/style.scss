@@ -694,7 +694,7 @@ body {
   text-align: center;
 }
 
-.promotions-slider i {
+.promotions-slider .dot {
   display: inline-block;
   width: 10px;
   height: 10px;
@@ -971,14 +971,14 @@ body {
   margin-top: 71px;
 }
 
-.slider-controls {
-  position: relative;
+// .slider-controls {
+//   position: relative;
 
-  width: 240px;
-  margin: 0;
-  margin-right: 80px;
-  padding: 0;
-}
+//   width: 240px;
+//   margin: 0;
+//   margin-right: 80px;
+//   padding: 0;
+// }
 
 .slider-controls {
   position: relative;
@@ -990,13 +990,9 @@ body {
   padding: 0;
 }
 
-.slider-controls .active {
-  color: #32425c;
 
-  background-color: #ffffff;
-}
 
-.services-slider span:first-child::after {
+.services-slider button:first-child::after {
   content: "";
   position: absolute;
   top: -40px;
@@ -1012,7 +1008,9 @@ body {
 
 .slider-btn {
   display: block;
-  padding: 16px 20px;
+  width: 240px;
+  padding: 16px 0;
+  padding-left: 20px;
 
   font-size: 21px;
   line-height: 30px;
@@ -1023,16 +1021,25 @@ body {
   background-color: #32425c;
   border: none;
   box-shadow: inset 0 -1px 0 #293449;
+  cursor: pointer;
+
   &:hover {
     background-color: #293449;
   }
 }
 
-.services-slide {
+.slider-controls .active {
+  color: #32425c;
+
+  background-color: #ffffff;
+  cursor: default;
+}
+
+.services-slides {
   position: relative;
 }
 
-.slide {
+.services-slide {
   position: absolute;
   left: 330px;
 
@@ -1041,7 +1048,7 @@ body {
   overflow: hidden;
 }
 
-.slide .h3 {
+.services-slide .h3 {
   margin: 0;
   margin-bottom: 28px;
 
@@ -1053,7 +1060,7 @@ body {
   text-transform: uppercase;
 }
 
-.slide p {
+.services-slide p {
   width: 315px;
 
   font-size: 13px;
@@ -1061,7 +1068,7 @@ body {
   font-family: "PT Sans", "Helvetica", "Arial", "sans-serif";
 }
 
-.slide .btn {
+.services-slide .btn {
   display: block;
   width: 195px;
   margin-top: 19px;
@@ -1095,7 +1102,23 @@ body {
   background-position: 155px 25px;
 }
 
-.slide {
+.credit-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 12px 45px;
+
+  font-size: 14px;
+  line-height: 18px;
+  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+  background-color: #ee3643;
+  border-radius: 3px;
+}
+
+.services-slide {
   display: none;
 }
 
@@ -1181,7 +1204,7 @@ body {
   font-family: "PT Sans", "Helvetica", "Arial", sans-serif;
 }
 
-.contacts .btn {
+.contacts-btn {
   display: inline-block;
   width: 300px;
   margin-top: 20px;
@@ -2136,19 +2159,19 @@ input[type="radio"]:checked + label::before {
 
 .modal-content {
   position: absolute;
-  top: 2500px;
+  top: 2300px;
   left: 50%;
 
+  display: none;
   width: 620px;
   margin-left: -390px;
 
-  color: #000000;
   font-size: 0;
+  color: #000000;
 
   background-color: #ffffff;
   border-top: 7px solid #ee3643;
   box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-  display: none;
 }
 
 .form-field {
@@ -2200,16 +2223,17 @@ input[type="radio"]:checked + label::before {
 }
 
 .modal-content label {
+  font-weight: 500;
   font-size: 16px;
   line-height: 18px;
-  font-weight: 500;
 }
 
 .left {
   display: inline-block;
   width: 214px;
-  margin-bottom: 35px;
   margin-right: 32px;
+  margin-bottom: 35px;
+
   vertical-align: top;
 }
 
@@ -2217,6 +2241,7 @@ input[type="radio"]:checked + label::before {
   display: inline-block;
   width: 214px;
   margin-bottom: 35px;
+
   vertical-align: top;
 }
 
@@ -2241,6 +2266,7 @@ textarea {
   width: 424px;
   height: 114px;
   margin: 0;
+  margin-bottom: 35px;
   padding: 14px 16px;
 
   font-size: 16px;
@@ -2250,7 +2276,6 @@ textarea {
 
   border: 2px solid #d7dcde;
   border-radius: 3px;
-  margin-bottom: 35px;
 }
 
 .button-block {
@@ -2260,36 +2285,42 @@ textarea {
 }
 
 .submit-modal-content {
-  padding: 13px 0;
   width: 460px;
-  border: none;
-  background-color: #ee3643;
-  color: #ffffff;
-  font-family: "Cumprum", "Helvetica", "Arial", "sans-serif";
+  padding: 13px 0;
+
   font-size: 13px;
+  font-family: "Cumprum", "Helvetica", "Arial", "sans-serif";
+  color: #ffffff;
   text-transform: uppercase;
+
+  background-color: #ee3643;
+  border: none;
 }
 
+.modal-content-show {
+  display: block;
+}
 
-.map {
+.modal-content-map {
   position: absolute;
   top: 2500px;
   left: 50%;
 
+  display: none;
   width: 940px;
   height: 445px;
   margin-left: -470px;
 
-
-  color: #000000;
   font-size: 0;
+  color: #000000;
+
+  display: none;
 
   background-color: #ffffff;
   box-shadow: 0 20px 40px rgba(0,0,0,0.7);
-  display: none;
 }
 
-.map-close {
+.modal-content-close {
   position: absolute;
   top: 6px;
   right: 6px;
@@ -2304,8 +2335,8 @@ textarea {
   cursor: pointer;
 }
 
-.map-close::before,
-.map-close::after {
+.modal-content-close::before,
+.modal-content-close::after {
   content: "";
   position: absolute;
   top: 11px;
@@ -2323,4 +2354,8 @@ textarea {
 
 .map-close::after {
   transform: rotate(-45deg);
+}
+
+.modal-content-show {
+  display: block;
 }
