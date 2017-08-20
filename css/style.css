@@ -48,51 +48,42 @@ body {
 }
 
 .toolbar {
-  height: 42px;
-
-  font-size: 0;
-
   background-color: #293449;
 }
 
 .toolbar-logo {
-  display: inline-block;
-  padding: 9px 55px;
+  float: left;
+  width: 220px;
+  margin-bottom: -3px;
+  padding-top: 9px;
+  padding-bottom: 10px;
 
   font-size: 24px;
-  line-height: 24px;
-  font-family: "Cuprum", "Arial", "sans-serif";
-  vertical-align: top;
-  color: #ffffff;
+  font-family: "Cuprum", Helvetica, Arial, sans-serif;
+  text-align: center;
+  color: white;
   text-transform: uppercase;
   text-decoration: none;
 
   background-color: #ee3643;
-  border-bottom: 5px solid #b52933;
+  -webkit-box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
+          box-shadow: inset 0 -5px 0 rgba(0, 0, 0, 0.24);
   cursor: pointer;
 }
+
 .toolbar-logo:hover {
-  background-color: #ca2c37;
-  border-bottom-color: #9a212a;
-}
-.toolbar-logo:active {
   background-color: #ba2732;
-  border-bottom-color: #8e1e26;
 }
 
 .search-form {
   position: relative;
 
-  display: inline-block;
+  float: left;
   width: 260px;
-  margin: 0;
-  padding: 0;
-}
-.search-form:hover .search-icon {
-  opacity: 1;
+  margin-right: 27px;
 }
 
-.search-icon {
+.search-form .search-icon {
   position: absolute;
   top: 12px;
   left: 17px;
@@ -106,36 +97,36 @@ body {
   background-position: -5px -801px;
   opacity: 0.3;
 }
-.search-icon:active {
-  background-image: url("../img/spritesheet.png");
-  background-repeat: no-repeat;
-  background-position: -5px -829px;
-  opacity: 0.3;
-}
 
-.search-field {
+.search-form label {
   position: absolute;
-  top: 9px;
+  top: 11px;
   left: 48px;
 
   font-size: 17px;
-  font-family: "Cuprum", "Helvetica", "Arial", "sans-serif";
-  color: #ffffff;
+  font-family: "Cuprum", Helvetica, Arial, sans-serif;
+  color: white;
+}
+
+.search-form:hover .search-icon {
+  opacity: 1;
 }
 
 .search-form input {
   display: block;
-  width: 95%;
-  padding-top: 40px;
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  padding-left: 50px;
 
   background-color: #293449;
   border: none;
 }
-.search-form input:focus {
-  z-index: 2;
 
-  background-color: #ffffff;
+.search-form input:focus {
+  background-color: white;
 }
+
 .search-form input:focus + .search-icon {
   background-position: -5px -828px;
   opacity: 1;
@@ -145,11 +136,11 @@ body {
   position: relative;
 
   display: inline-block;
-  width: 140px;
+  width: 90px;
   margin: 0;
   padding: 0;
-  padding-top: 10px;
-  padding-left: 20px;
+  padding-top: 12px;
+  padding-left: 27px;
 
   font-size: 17px;
   line-height: 18px;
@@ -194,11 +185,13 @@ body {
   position: relative;
 
   display: inline-block;
-  width: 140px;
+  width: 115px;
   margin: 0;
-  margin-left: 20px;
+  margin-right: 3px;
+  margin-left: 27px;
   padding: 12px 0;
-  padding-top: 10px;
+  padding-top: 12px;
+  padding-left: 13px;
 
   font-size: 17px;
   line-height: 18px;
@@ -212,7 +205,7 @@ body {
   content: "";
   position: absolute;
   top: 12px;
-  left: 10px;
+  left: 2px;
 
   width: 17px;
   height: 16px;
@@ -237,7 +230,7 @@ body {
 .new-order {
   display: inline-block;
   margin: 0;
-  padding: 12px 16px;
+  padding: 12px 21px;
 
   font-size: 17px;
   line-height: 18px;
@@ -256,7 +249,7 @@ body {
 }
 
 .description-block {
-  min-height: 150px;
+  min-height: 125px;
   margin-top: 20px;
 
   background-color: #f1f5f7;
@@ -264,12 +257,13 @@ body {
 
 .header-description {
   display: inline-block;
-  width: 300px;
-  min-height: 115px;
+  width: 227px;
+  min-height: 109px;
   margin-top: 0;
   margin-right: 20px;
   margin-bottom: 0;
-  padding-top: 30px;
+  padding-top: 29px;
+  padding-left: 53px;
 
   font-size: 16px;
   line-height: 23px;
@@ -282,8 +276,8 @@ body {
 .header-contacts {
   display: inline-block;
   width: 300px;
-  min-height: 150px;
-  margin-right: 37px;
+  min-height: 125px;
+  margin-right: 53px;
 
   vertical-align: top;
   text-align: center;
@@ -293,9 +287,10 @@ body {
   position: relative;
 
   display: inline-block;
-  width: 260px;
-  margin-top: 40px;
+  width: 236px;
+  margin-top: 27px;
   padding: 9px 0;
+  padding-left: 25px;
 
   font-size: 21px;
   line-height: 18px;
@@ -329,20 +324,21 @@ body {
 
 .user-buttons {
   display: inline-block;
-  width: 276px;
-  min-height: 150px;
+  width: 280px;
+  min-height: 125px;
+
+  font-size: 0;
+}
+
+.user-btn {
+  display: inline-block;
+  margin-top: 13px;
+  padding: 14px 24px;
 
   font-size: 21px;
   line-height: 18px;
   font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
-}
-
-.user-btn {
-  display: inline-block;
-  margin-top: 40px;
-  padding: 12px 25px;
-
   vertical-align: top;
   color: #000000;
   text-decoration: none;
@@ -356,13 +352,14 @@ body {
 .login {
   position: relative;
 
-  padding-left: 40px;
+  margin-right: 10px;
+  padding-left: 47px;
 }
 .login::after {
   content: "";
   position: absolute;
-  top: 12px;
-  left: 15px;
+  top: 14px;
+  left: 13px;
 
   width: 20px;
   height: 17px;
@@ -491,12 +488,12 @@ body {
 .main-navigation li {
   display: inline-block;
 
-  vertical-align: middle;
+  vertical-align: top;
 }
 
 .main-navigation a {
   display: block;
-  padding: 19px 29px;
+  padding: 19px 28px;
 
   font-size: 17px;
   line-height: 17px;
@@ -515,7 +512,7 @@ body {
 }
 
 .promotions {
-  margin-top: 60px;
+  margin-top: 49px;
 }
 
 .promotions-block {
@@ -527,6 +524,9 @@ body {
   margin-right: 16px;
   margin-bottom: 20px;
   padding: 23px 23px;
+  padding-top: 21px;
+  padding-bottom: 25px;
+  padding-left: 23px;
 
   vertical-align: top;
 }
@@ -561,11 +561,14 @@ body {
 
 .promotions-block .btn {
   display: inline-block;
+  width: 135px;
   margin-top: 10px;
-  padding: 12px 23px;
+  margin-left: 2px;
+  padding: 13px 0;
 
   font-family: "Cuprum", "Arial", "sans-serif";
   vertical-align: top;
+  text-align: center;
   color: #ffffff;
   text-transform: uppercase;
   text-decoration: none;
@@ -604,35 +607,35 @@ body {
   background-color: #f6b22d;
   background-image: url("../img/materials-icon.png");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 212px 31px;
 }
 
 .promotions-tools {
   background-color: #4aafde;
   background-image: url("../img/tools-icon.png");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 199px 33px;
 }
 
 .promotions-machines {
   background-color: #cc79d1;
   background-image: url("../img/machines-icon.png");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 192px 30px;
 }
 
 .promotions-discounts {
   background-color: #85d179;
   background-image: url("../img/discounts-icon.png");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 195px 25px;
 }
 
 .promotions-delivery {
   background-color: #f6b22d;
   background-image: url("../img/delivery-icon.png");
   background-repeat: no-repeat;
-  background-position: 200px 20px;
+  background-position: 191px 31px;
 }
 
 .promotions-block:nth-child(3),
@@ -2343,7 +2346,7 @@ textarea {
   position: fixed;
   top: 210px;
   left: 50%;
-  z-index: 100; 
+  z-index: 100;
 
   display: none;
   width: 620px;
@@ -2363,7 +2366,7 @@ textarea {
   display: inline-block;
   width: 64px;
   height: 64px;
-  margin-right: 34px; 
+  margin-right: 34px;
 
   vertical-align: middle;
 
@@ -2379,7 +2382,7 @@ textarea {
   content: "";
   position: absolute;
   top: 18px;
-  left: 15px; 
+  left: 15px;
 
   width: 39px;
   height: 30px;
@@ -2408,7 +2411,7 @@ textarea {
   padding: 10px 0;
 
   font-size: 14px;
-  line-height: 18px; 
+  line-height: 18px;
   font-family: "Cuprum", Helvetica, Arial, sans-serif;
   color: #ffffff;
   text-transform: uppercase;
@@ -2433,7 +2436,7 @@ textarea {
   padding: 10px 0;
 
   font-size: 14px;
-  line-height: 18px; 
+  line-height: 18px;
   font-family: "Cuprum", Helvetica, Arial, sans-serif;
   vertical-align: middle;
   text-align: center;
@@ -2460,7 +2463,7 @@ textarea {
   padding: 10px 0;
 
   font-size: 14px;
-  line-height: 18px; 
+  line-height: 18px;
   font-family: "Cuprum", Helvetica, Arial, sans-serif;
   vertical-align: middle;
   text-align: center;
